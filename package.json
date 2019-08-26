@@ -17,6 +17,6 @@
     },
     "homepage": "https://github.com/mmzp/egg-http-sig#readme",
     "dependencies": {
-        "http-sig": "^0.0.1"
+        "http-sig": "0.0.2"
     }
 }

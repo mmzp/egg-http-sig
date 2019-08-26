@@ -10,7 +10,8 @@ module.exports = options => {
     return async (ctx, next) => {
         const url = ctx.url;
         const method = ctx.method;
-        const pathInfo = url.substr(0, url.indexOf('?'));
+        const pos = url.indexOf('?');
+        const pathInfo = pos === -1 ? url : url.substr(0, url.indexOf('?'));
         const params = method === 'GET' ? ctx.query : ctx.request.body;
         const secret = options.secret || '';
         const clientSig = ctx.get('x-sig') || '';
