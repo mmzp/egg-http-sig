@@ -12,7 +12,16 @@ module.exports = options => {
         const method = ctx.method;
         const pos = url.indexOf('?');
         const pathInfo = pos === -1 ? url : url.substr(0, url.indexOf('?'));
-        const params = method === 'GET' ? ctx.query : ctx.request.body;
+
+        let params;
+        if (ctx.get('content-type') === 'application/json') {
+            params = ctx.request.rawBody;
+        } else if (method === 'GET') {
+            params = ctx.query;
+        } else {
+            params = ctx.request.body;
+        }
+
         const secret = options.secret || '';
         const clientSig = ctx.get('x-sig') || '';
         const sig = httpSig.generate(method, pathInfo, params, secret);
