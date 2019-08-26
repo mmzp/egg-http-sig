@@ -1,6 +1,6 @@
 {
     "name": "egg-http-sig",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "适用于 eggjs 框架的 HTTP 参数签名中间件",
     "main": "index.js",
     "scripts": {
