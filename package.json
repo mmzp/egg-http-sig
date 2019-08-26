@@ -1,0 +1,22 @@
+{
+    "name": "egg-http-sig",
+    "version": "0.0.1",
+    "description": "适用于 eggjs 框架的 HTTP 参数签名中间件",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mmzp/egg-http-sig.git"
+    },
+    "author": "mmzp@qq.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mmzp/egg-http-sig/issues"
+    },
+    "homepage": "https://github.com/mmzp/egg-http-sig#readme",
+    "dependencies": {
+        "http-sig": "^0.0.1"
+    }
+}
